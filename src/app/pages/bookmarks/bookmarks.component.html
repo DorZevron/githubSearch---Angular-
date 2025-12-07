@@ -1,0 +1,24 @@
+<h2>Bookmarked Repositories</h2>
+
+<div *ngIf="isLoading">
+    Loading...
+</div>
+
+<div *ngIf="!isLoading && bookmarks.length === 0">
+    No bookmarks.
+</div>
+
+<div class="bookmarks-grid">
+    <mat-card *ngFor="let repo of bookmarks" class="repo-card">
+        <mat-card-header>
+            <div mat-card-avatar class="avatar">
+                <img [src]="repo.avatarUrl" alt="avatar" />
+            </div>
+            <mat-card-title>{{ repo.name }}</mat-card-title>
+        </mat-card-header>
+
+        <mat-card-content>
+            <p>{{ repo.description || 'No description' }}</p>
+        </mat-card-content>
+    </mat-card>
+</div>

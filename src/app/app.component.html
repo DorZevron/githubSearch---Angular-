@@ -1,1 +1,13 @@
-<h1>Hello Word</h1>
+<mat-toolbar color="primary">
+  <span>GitHub Search By DorZvn</span>
+
+  <span class="spacer"></span>
+
+  <button mat-button routerLink="/search">Search</button>
+  <button mat-button routerLink="/bookmarks">Bookmarks</button>
+  <button mat-button routerLink="/login">Logout / Login</button>
+</mat-toolbar>
+
+<main class="main-container">
+  <router-outlet></router-outlet>
+</main>
