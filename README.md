@@ -2,6 +2,14 @@
 
 This project was generated using [Angular CLI](https://github.com/angular/angular-cli) version 19.2.12.
 
+## Frontend – Angular 19 Dor
+- Angular Material UI
+- HttpClient + Interceptors
+- Route Guards (CanActivate)
+- Reactive Forms
+- JWT handling (localStorage)
+- Session cookies using `withCredentials: true`
+
 ## Development server
 
 To start a local development server, run:
