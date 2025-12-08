@@ -13,10 +13,10 @@ export class BookmarksService {
 
 
   getBookmarks(): Observable<BookmarkEntry[]> {
-    return this.http.get<BookmarkEntry[]>(`${environment.apiBaseUrl}/bookmarks`);
+    return this.http.get<BookmarkEntry[]>(`${environment.apiBaseUrl}/bookmarks`, { withCredentials: true });
   }
 
   addBookmark(entry: BookmarkEntry): Observable<void> {
-    return this.http.post<void>(`${environment.apiBaseUrl}/bookmarks`, entry);
+    return this.http.post<void>(`${environment.apiBaseUrl}/bookmarks`, entry, { withCredentials: true });
   }
 }

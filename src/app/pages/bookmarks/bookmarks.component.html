@@ -9,10 +9,13 @@
 </div>
 
 <div class="bookmarks-grid">
-    <mat-card *ngFor="let repo of bookmarks" class="repo-card">
+    <mat-card *ngFor="let repo of bookmarks" class="repo-card" appearance="outlined">
         <mat-card-header>
-            <div mat-card-avatar class="avatar">
+            <div *ngIf="repo.avatarUrl" mat-card-avatar class="avatar">
                 <img [src]="repo.avatarUrl" alt="avatar" />
+            </div>
+            <div *ngIf="!repo.avatarUrl" mat-card-avatar class="avatar">
+                no-image
             </div>
             <mat-card-title>{{ repo.name }}</mat-card-title>
         </mat-card-header>
@@ -20,5 +23,6 @@
         <mat-card-content>
             <p>{{ repo.description || 'No description' }}</p>
         </mat-card-content>
+
     </mat-card>
 </div>
